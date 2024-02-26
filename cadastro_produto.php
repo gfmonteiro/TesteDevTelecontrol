@@ -61,7 +61,6 @@ if (isset($_POST["submit"])) {
 	    }
     }
 }
-
 	// Se clicar em "Listar Produtos" faz select na tabela de produtos
 	if (isset($_POST["listar"])){
 		$sql = "SELECT * FROM tbl_produto";
@@ -90,7 +89,6 @@ if (isset($_POST["submit"])) {
 	}
 
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -104,7 +102,6 @@ if (isset($_POST["submit"])) {
 		Cadastro Produto
 	</title>
 	<style>
-
 		.box {
             position: absolute;
             top: 50%;
@@ -124,7 +121,6 @@ if (isset($_POST["submit"])) {
             margin-top: 40%;
             border: 3px solid black;
         }
-
 	</style>
 </head>
 <body>
@@ -167,8 +163,7 @@ if (isset($_POST["submit"])) {
                     <div class="col">
                         <label for="tempo_garantia" class="label" step="1">Tempo Garantia</label><br>
                         <input type="text" name="tempo_garantia" id="tempo_garantia" value="<?php echo $tempo_garantia?>" class="form-control">
-                    </div>
-                    
+                    </div>      
                 </div>
                 <div class="row mb-3">
                     <div class="col-4">

@@ -52,7 +52,6 @@ if (isset($_POST["submit"])) {
 
 	$result_cliente = pg_fetch_all($res);
 }
-
 	// Se o ID do cliente não for vazio, ou seja, existir produto, tras os campos em tela
 	$id_cliente = $_GET['cliente'];
 
@@ -64,13 +63,9 @@ if (isset($_POST["submit"])) {
 			$nome = pg_fetch_result($res, 0, "nome");
 			$cpf = pg_fetch_result($res, 0, "cpf");
 			$endereco = pg_fetch_result($res, 0, "endereco");
-		
 		}
 	}
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -82,7 +77,6 @@ if (isset($_POST["submit"])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <title>Cadastro de Cliente</title>>
     <style>
-
 		.box{
 			position: absolute;
 			top: 50%;
@@ -90,14 +84,10 @@ if (isset($_POST["submit"])) {
 			transform: translate(-50%, -50%);
 			border: 3px solid black;
 			padding: 15px;
-		
-
 		}
-
 		.inputBox{
 			position: relative;
 		}
-
 	</style>
 </head>
 <body>
@@ -107,12 +97,9 @@ if (isset($_POST["submit"])) {
         		$(".alert-danger, .alert-success").hide();
     		}, 3000); // 3000 milissegundos = 3 segundos
 		});
-
 		$(document).ready(function(){
 			$('#cpf').mask('000.000.000-00', {reverse: true});
 		});
-
-
 	</script>
 	<div class="container box">
         <h2 class="text-center mb-4">Cadastro de Cliente</h2>
@@ -148,5 +135,3 @@ if (isset($_POST["submit"])) {
     </div>
 </body>
 </html>
-
-

@@ -53,7 +53,6 @@ if (isset($_POST["submit"])) {
 	    	}
 
 	    }
-
 	    //Validar se cliente existe
 	    $sqlCliente = "Select * FROM tbl_cliente WHERE cpf = '$cpf'";
 	    $resultCliente = pg_query($conn, $sqlCliente);
@@ -77,7 +76,6 @@ if (isset($_POST["submit"])) {
 				}
 			}
 		}
-
 		if(count($msg_erro) == 0){
 			$insertOS = "
 			INSERT INTO tbl_os (numero_os, data_abertura, consumidor, cpf, id_produto) 
@@ -94,15 +92,11 @@ if (isset($_POST["submit"])) {
 	}
 	
 }
-
 	// Fazendo consulta de produtos no banco
 	$sqlProdutos = "Select * FROM tbl_produto";
 	$resultProdutos = pg_query($conn, $sqlProdutos);
 
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -116,7 +110,6 @@ if (isset($_POST["submit"])) {
 		Abertura de Ordem de Serviço
 	</title>
 	<style>
-
 		.box{
 			position: absolute;
 			top: 50%;
@@ -124,14 +117,11 @@ if (isset($_POST["submit"])) {
 			transform: translate(-50%, -50%);
 			border: 3px solid black;
 			padding: 15px;
-		
-
 		}
 
 		.inputBox{
 			position: relative;
 		}
-
 	</style>
 </head>
 <body>
